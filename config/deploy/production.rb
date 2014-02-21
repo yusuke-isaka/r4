@@ -7,7 +7,9 @@
 role :app, %w{yusuke@54.199.222.101}
 #role :web, %w{deploy@example.com}
 #role :db,  %w{deploy@example.com}
-
+set :assets_roles, :app
+set :branch, :master
+set :rails_env, 'production'
 set :ssh_options, {
   keys: %w(~/.ssh/yusuke_mac),
   forward_agent: false,
