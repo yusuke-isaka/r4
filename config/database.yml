@@ -33,8 +33,9 @@ test:
 production:
   adapter: mysql2
   encoding: utf8
-  database: r4_production
+  database: dev
   pool: 5
-  username: root
-  password:
+  username: yusuke
+  password: 0829abcd
+  host: dev.clsj2jn6wlm5.ap-northeast-1.rds.amazonaws.com
   socket: /tmp/mysql.sock
