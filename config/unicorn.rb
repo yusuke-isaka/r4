@@ -2,14 +2,17 @@
 
 worker_processes  4
 
-application = 'r4'
-working_directory '/var/www/projects/r4/current'
-listen "/tmp/#{application}.sock", :backlog => 1
+app_path = '/var/www/projects/r4'
+app_shared_path = "#{app_path}/shared"
+working_directory "#{app_path}/current/"
+
+listen "#{app_shared_path}/tmp/sockets/unicorn.sock"
+stdout_path "#{app_shared_path}/log/unicorn.stdout.log"
+stderr_path "#{app_shared_path}/log/unicorn.stderr.log"
+pid "#{app_shared_path}/tmp/pids/unicorn.pid"
+
+preload_app true
 listen 4423, :tcp_nopush => true
-timeout 10
-pid "/tmp/#{application}.sock"
-preload_app  true
-stderr_path "/var/log/#{application}.log"
 
 before_fork do |server, worker|
   old_pid = "#{server.config[:pid]}.oldbin"
