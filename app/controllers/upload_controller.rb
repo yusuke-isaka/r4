@@ -1,5 +1,5 @@
 class UploadController < ApplicationController
-  
+  before_filter :authenticate_account!
   
   def new
   end

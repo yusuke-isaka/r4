@@ -1,5 +1,6 @@
 R4::Application.routes.draw do
   
+  devise_for :accounts
   root :to => redirect('/posts')
   resources :posts
   resources :upload, :only => [:new, :create]
