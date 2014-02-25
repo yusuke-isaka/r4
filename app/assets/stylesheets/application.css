@@ -10,4 +10,31 @@
  *
  *= require_self
  *= require_tree .
+ *= require bootstrap
  */
+
+.post_box {
+	max-width: 480px;
+	margin: 5px 0px 50px 0px;
+}
+
+.share_box {
+	margin: 0 auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.share_button {
+	width: 120px;
+	height: 40px;
+}
+
+iframe {
+	width: 100%;
+}
+
+body {
+  min-height: 2000px;
+  padding-top: 70px;
+}
