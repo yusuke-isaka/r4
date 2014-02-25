@@ -1,0 +1,12 @@
+<div class="page-header">
+  <h1>アップロード</h1>
+</div>
+<%= form_tag({:controller => :upload, :action => :create}, :multipart => true) do %>
+	<%= file_field_tag :image %>
+	<div class="form-actions">
+		<%= submit_tag nil, :class => 'btn btn-primary' %>	
+	</div>
+<% end %>
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              posts_path, :class => 'btn'  %>
+
