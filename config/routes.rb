@@ -4,6 +4,7 @@ R4::Application.routes.draw do
   root :to => redirect('/posts')
   resources :posts
   resources :upload, :only => [:new, :create]
+  resources :admin, :only => :index
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
