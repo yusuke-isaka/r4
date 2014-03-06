@@ -1,6 +1,8 @@
-<a href="<%=URI.encode("https://www.facebook.com/sharer/sharer.php?u=#{post_url(post)}")%>" target="_blank">
-	<%= image_tag "share.jpg"%>
-</a>
-<a href="<%=URI.encode("https://twitter.com/intent/tweet?source=webclient&original_refere=#{post_url(post)}&text=#{post.title}&url=#{post_url(post)}")%>" target="_blank">
-	<%= image_tag "tweet.jpg"%>
-</a>
+<div class="share_box">
+	<a href="<%=URI.encode("https://www.facebook.com/sharer/sharer.php?u=#{post_url(post)}")%>" target="_blank">
+		<%= image_tag "share.jpg", :class => "share_button"%>
+	</a>
+	<a href="<%=URI.encode("https://twitter.com/intent/tweet?source=webclient&original_refere=#{post_url(post)}&text=#{post.title}&url=#{post_url(post)}")%>" target="_blank">
+		<%= image_tag "tweet.jpg", :class => "share_button" %>
+	</a>
+</div>

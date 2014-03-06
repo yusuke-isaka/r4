@@ -51,8 +51,8 @@ end
 # gem 'debugger', group: [:development, :test]
 
 #my own gems
-gem 'twitter-bootstrap-rails'
+#gem 'twitter-bootstrap-rails'
+#gem "less-rails"
 gem 'therubyracer'
-gem "less-rails"
 gem 'devise'
 gem 'cancan'

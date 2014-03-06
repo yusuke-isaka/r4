@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140225031116) do
+ActiveRecord::Schema.define(version: 20140226115345) do
 
   create_table "accounts", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -33,6 +33,9 @@ ActiveRecord::Schema.define(version: 20140225031116) do
     t.integer  "lock_version", default: 0, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "preview_img"
+    t.integer  "access",       default: 0, null: false
+    t.integer  "recommend",    default: 0, null: false
   end
 
   create_table "posts_bk", force: true do |t|

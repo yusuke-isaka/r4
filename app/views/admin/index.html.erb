@@ -1,12 +1,13 @@
 <legend>管理者メニュー</legend>
 
 <%= link_to "画像アップロード", {:controller => :upload, :action => :new}, :class => "btn btn-primary" %>
+<%= link_to "投稿", {:controller => :posts, :action => :new}, :class => "btn btn-primary" %>
 <br/><br/>
 
 <table class="table table-striped">
 	<thead>
 		<tr>
-			<th>Id</th><th>Title</th><th>Action</th>
+			<th>Id</th><th>タイトル</th><th>アクセス</th><th>レコメンド</th><th>操作</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -14,9 +15,11 @@
 			<tr>
 				<td><%=post.id%></td>
 				<td><%=post.title%></td>
+				<td><%=post.access%></td>
+				<td><%=post.recommend%></td>
 				<td>
 					<%= link_to t('.edit', :default => t("helpers.links.edit")),
-		              post_path(post),
+		              edit_post_path(post),
 		              :method => 'get',
 		              :class => 'btn btn-primary' %>
 					<%= link_to t('.destroy', :default => t("helpers.links.destroy")),

@@ -13,7 +13,7 @@ class UploadController < ApplicationController
       path = dir + name
       raise if(File.exists?(path))
       File.open(path, 'wb') {|f| f.write(params[:image].read)}
-      uri = "/static/#{name}"
+      uri = "//www.funny.jp.net/static/#{name}"
       @output = "<img src='#{uri}' />"  
     rescue => e
       @output = e.message

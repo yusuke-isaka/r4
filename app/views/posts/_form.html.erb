@@ -1,4 +1,4 @@
-<%= form_for @post, :html => { :class => 'form-horizontal' } do |f| %>
+<%= form_for @post, :html => { :class => 'form-horizontal', :style => 'width: 600px;' } do |f| %>
 
   <div class="control-group">
     <%= f.label :title, :class => 'control-label' %>
@@ -18,6 +18,20 @@
     <%= f.label :thumbnail, :class => 'control-label' %>
     <div class="controls">
       <%= f.text_area :thumbnail, :class => 'text_area' %>
+    </div>
+  </div>
+  
+  <div class="control-group">
+    <%= f.label :preview_img, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :preview_img, :class => 'text_area' %>
+    </div>
+  </div>
+  
+  <div class="control-group">
+    <%= f.label :recommend, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.check_box(:recommend) %>
     </div>
   </div>
 

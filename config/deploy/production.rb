@@ -4,7 +4,7 @@
 # server in each group is considered to be the first
 # unless any hosts have the primary property set.
 # Don't declare `role :all`, it's a meta role
-role :app, %w{yusuke@54.199.222.101}
+role :app, %w{yusuke@54.199.232.119}
 #role :web, %w{deploy@example.com}
 #role :db,  %w{deploy@example.com}
 set :assets_roles, :app
@@ -22,7 +22,7 @@ set :ssh_options, {
 # definition into the server list. The second argument
 # something that quacks like a hash can be used to set
 # extended properties on the server.
-server '54.199.222.101', user: 'yusuke', roles: :app
+server '54.199.232.119', user: 'yusuke', roles: :app
 
 # you can set custom ssh options
 # it's possible to pass any option but you need to keep in mind that net/ssh understand limited list of options

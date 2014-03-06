@@ -11,6 +11,7 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    ActiveRecord::Base.connection.execute("update posts set access = access + 1 where id = #{@post.id}")
   end
 
   # GET /posts/new
@@ -70,6 +71,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :content, :thumbnail, :lock_version)
+      params.require(:post).permit(:title, :content, :thumbnail, :preview_img, :recommend, :lock_version)
     end
 end

@@ -1,11 +1,11 @@
 <% @posts.each do |post| %>
-	<h3><%= link_to post.title, post_path(post) %></h3>
-	<h6><i class="icon-time"></i><%= post.created_at%></h6>
-	<br/>
-	<%= render "common/share", :post => post %>
-	<br/><br/>
-	<p>
-		<%= post.thumbnail.html_safe %>
-	</p>
-	<p><%= link_to "続きを読む →", post_path(post), :style => "color:red;" %></p>
+	<div class="post_box">
+		<h3><%= link_to post.title, post_path(post) %></h3>
+		<h6><i class="icon-time"></i><%= post.created_at%></h6>
+		<%= render "common/share", :post => post %>
+		<p>
+			<%= post.thumbnail.html_safe %>
+		</p>
+		<p><%= link_to "続きを読む →", post_path(post), :style => "color:red;" %></p>
+	</div>
 <%end%>

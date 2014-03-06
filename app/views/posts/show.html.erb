@@ -1,11 +1,22 @@
-<h6><i class="icon-time"></i><%= @post.created_at%></h6>
-<br/>
-<%= render "common/share", :post => @post %>
-<br/><br/>
-<p>
-	<%= @post.content.html_safe %>
-</p>
-<%= render "common/share", :post => @post %>
-<br/><br/>
-<%= link_to t('.back', :default => t("helpers.links.back")),
-              posts_path, :class => 'btn'  %>
+<%= content_for(:head) do %>
+	<meta property="og:title" content="<%= @post.title %>" />
+	<meta property="og:image" content="<%= @post.preview_img %>" />
+	<meta property="og:url" content="<%= post_url(@post)%>" />
+	<meta property="og:description" content="<%= @post.title %>" />
+	
+<%end%>
+<%= content_for(:title) do %>
+	<%= @post.title%>
+<%end%>
+<div class="post_box">
+	<legend><%= @post.title%></legend>
+	<h6><i class="icon-time"></i><%= @post.created_at%></h6>
+	<%= render "common/share", :post => @post %>
+	<p>
+		<%= @post.content.html_safe %>
+	</p>
+	<%= render "common/share", :post => @post %>
+	<br/><br/>
+	<%= link_to t('.back', :default => t("helpers.links.back")),
+	              posts_path, :class => 'btn'  %>
+</div>
