@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140226115345) do
+ActiveRecord::Schema.define(version: 20140607150125) do
 
   create_table "accounts", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -22,6 +22,8 @@ ActiveRecord::Schema.define(version: 20140226115345) do
     t.integer  "lock_version",           default: 0,  null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "provider"
+    t.string   "uid"
   end
 
   create_table "posts", force: true do |t|

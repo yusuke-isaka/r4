@@ -1,6 +1,6 @@
 R4::Application.routes.draw do
   
-  devise_for :accounts
+  devise_for :accounts, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
   root :controller => :posts, :action => :index
   resources :posts
   resources :upload, :only => [:new, :create]

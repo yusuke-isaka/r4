@@ -26,6 +26,7 @@
 		<div class="container">
 	        <div class="navbar-header">
 	        	<a class="navbar-brand" href="/"><%= image_tag "logo.jpg", :class => "logo"%> Funny</a>
+				<%= link_to "Sign in with Facebook", account_omniauth_authorize_path(:facebook) %>
 	        </div>
 	    </div>
     </div>
