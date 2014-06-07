@@ -15,4 +15,4 @@
 //= require turbolinks
 //= require bootstrap
 //= require ga
-//= require_tree .
+//= require angular-1.3.0-beta.11/angular.min.js

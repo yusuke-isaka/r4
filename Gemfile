@@ -56,3 +56,4 @@ end
 gem 'therubyracer'
 gem 'devise'
 gem 'cancan'
+gem 'omniauth-facebook'
